@@ -4,7 +4,6 @@ public class Cocinerio extends Persona {
 	
 	private int estrellas;
 	private int cont;
-	private Cocinerio cocinerio;
 	private Cocinerio cocinerios[] = new Cocinerio[20];
 
 	public Cocinerio(int pEstrella, String pNombre, String pDirreccion, String pId) {

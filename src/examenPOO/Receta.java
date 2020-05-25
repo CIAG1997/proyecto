@@ -7,15 +7,18 @@ public class Receta {
 	private listaIngredientes listaIngredientes;
 	private listaIngredientes listaIngrediente[];
 	private int cont;
-	private int cont2;
 	
 	public Receta(String pNombre, String pTipo) {
 		
 		this.Nombre = pNombre;
 		this.tipo = pTipo;
 		cont = -1;
-		cont2 = 20;
-		listaIngrediente = new listaIngredientes[cont2];
+		listaIngrediente = new listaIngredientes[20];
+		
+	}
+	
+	public Receta() {
+		
 		
 		
 	}
@@ -44,20 +47,23 @@ public class Receta {
 	public void agregarRecetaI(listaIngredientes listaIngredientes) {
 		
 		cont++;
-		listaIngrediente[cont] = new listaIngredientes(listaIngredientes.getCantidad(),listaIngredientes.getNombre()); 
+		listaIngrediente[cont] = new listaIngredientes(listaIngredientes.getCantidad(),listaIngredientes.getNombre());
 		
 	}
 	
 	public void imprimirIngredientesR() {
 		
-		System.out.println("Reseta: "+Nombre+"\t\t"+"Tipo: "+tipo);
+		System.out.println("Reseta: "+this.Nombre+"\t\t"+"Tipo: "+this.tipo);
 		System.out.println("\t"+"Lista De Ingredientes");
 		System.out.println("Nombre: "+"\t\t\t"+"Libras:");
+		
 		for(int i= 0; i <= cont; i++){ 
 						
 			System.out.println(listaIngrediente[i].getNombre()+"\t\t\t"+listaIngrediente[i].getCantidad());
 			
 		}
+		
+		System.out.println("\n");
 		
 	}
 
