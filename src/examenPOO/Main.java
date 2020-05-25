@@ -42,7 +42,7 @@ public class Main {
 			System.out.println("\t"+"Eliga Una Opcion"+"\n");
 			System.out.println("0. Agregar Cocinero");
 			System.out.println("1. Agregar Reseta");
-			System.out.println("2. Agregar Lista De Ingredientes");
+			System.out.println("2. Agregar Lista De Ingredientes Que Contenga La Cocina");
 			System.out.println("3. Agregar Tipos De Pastas");
 			System.out.println("4. Agregar Tipos De Granos");
 			System.out.println("5. Salir");
