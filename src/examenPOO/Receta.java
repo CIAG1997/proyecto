@@ -53,7 +53,7 @@ public class Receta {
 	
 	public void imprimirIngredientesR() {
 		
-		System.out.println("Reseta: "+this.Nombre+"\t\t"+"Tipo: "+this.tipo);
+		System.out.println("Reseta: "+this.Nombre+"\t\t"+"1."+"Tipo: "+this.tipo);
 		System.out.println("\t"+"Lista De Ingredientes");
 		System.out.println("Nombre: "+"\t\t\t"+"Libras:");
 		
@@ -64,6 +64,14 @@ public class Receta {
 		}
 		
 		System.out.println("\n");
+		
+	}
+	
+	public void EliminarR(Receta reseta) {
+		
+		reseta = null;
+		
+		imprimirIngredientesR();
 		
 	}
 

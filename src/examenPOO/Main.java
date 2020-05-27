@@ -32,9 +32,9 @@ public class Main {
 		
 		Granos granos = new Granos();
 		
-		Scanner leer = new Scanner(System.in);
-		
 		Pastas pastas = new Pastas();
+		
+		Scanner leer = new Scanner(System.in);
 		
 		while(bandera3 == true) {
 			
@@ -81,6 +81,21 @@ public class Main {
 						bandera = false;
 						
 						cosineros.imprimirCocinero();
+						
+						System.out.println("Quieres Eliminar Algun Cocinero si = 1, no = 0");
+						
+						decicion2 = Integer.parseInt(leer.nextLine());
+						
+						if(decicion2 == 1) {
+							
+							System.out.println("Agrege El Indice");
+							
+							decicion2 = Integer.parseInt(leer.nextLine());
+							
+							
+							cosineros.Eliminar(decicion2);
+							
+						}
 						
 					}
 					
@@ -129,6 +144,8 @@ public class Main {
 							
 							bandera2 = false;
 							
+							
+							
 						}
 						
 					}
@@ -141,16 +158,52 @@ public class Main {
 					if(decicion2 == 0) {
 						
 						bandera = false;
+						for(int j=0; j<=cont; j++ ) {
+							System.out.println("\n");
+							System.out.println("\t\t"+"Reseta: "+j);
+							recetas[j].imprimirIngredientesR();
+							
+						}
 						
 					}
-
+					
 				}
 				
-				for(int i=0; i<=cont;i++) {
+				System.out.println("Quieres Eliminar Alguna Reseta si = 1, no = 0");
+				
+				decicion2 = Integer.parseInt(leer.nextLine());
+				
+				if(decicion2 == 1) {
+					cont--;
+					System.out.println("Agrege El Indice");
 					
-					recetas[i].imprimirIngredientesR();
+					decicion2 = Integer.parseInt(leer.nextLine());
+					
+					for(int q=0; q<=cont; q++) {
+						
+						if(q == decicion2) {
+							
+							cont--;
+							
+							for(int p=q; p<=cont;p++) {
+								
+								recetas[p] = recetas[p+1];
+								
+							}
+							
+						}
+						
+					}
 					
 				}
+				
+				for(int j=0; j<=cont; j++ ) {
+					System.out.println("\n");
+					System.out.println("\t\t"+"Reseta: "+j);
+					recetas[j].imprimirIngredientesR();
+					
+				}
+
 							
 				break;
 				
@@ -274,3 +327,5 @@ public class Main {
 	}
 	
 }
+
+

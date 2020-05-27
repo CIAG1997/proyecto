@@ -1,6 +1,6 @@
 package examenPOO;
 
-public class Granos extends Ingredientes{
+public class Granos extends Ingredientes implements Partes{
 	
 	private int cont;
 	private Granos granos[];
@@ -34,9 +34,20 @@ public class Granos extends Ingredientes{
 		
 		for(int i= 0; i <= cont; i++){ 
 						
-			System.out.println(granos[i].getNombre()+"\t\t\t"+granos[i].getPrecio());
+			System.out.println(i+" "+granos[i].getNombre()+"\t\t\t"+granos[i].getPrecio());
 			
 		}		
+		
+		System.out.println("\n");
+		
+	}
+
+	public void eliminar() {
+		
+		
+	}
+
+	public void agregarComida(Pastas pastas) {
 		
 		
 	}

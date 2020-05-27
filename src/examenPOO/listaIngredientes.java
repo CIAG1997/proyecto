@@ -19,18 +19,19 @@ public class listaIngredientes {
     	
     	cont = -1;
     	listaIngredientes = new listaIngredientes[20];
+    	partes = new Partes[20];
     	
     }
     
 	public int getCantidad() {
 		return cantidad;
 	}
+	
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
 	
 	
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -51,6 +52,8 @@ public class listaIngredientes {
 	
 	public void agregarListaIngredientes(listaIngredientes listaIngredientes) {
 		
+		Partes = 
+		
 		cont++;
 		this.listaIngredientes[cont] = new listaIngredientes(listaIngredientes.getCantidad(),listaIngredientes.getNombre());
 
@@ -63,9 +66,11 @@ public class listaIngredientes {
 		
 		for(int i= 0; i <= cont; i++){ 
 						
-			System.out.println(listaIngredientes[i].getNombre()+"\t\t\t"+listaIngredientes[i].getCantidad());
+			System.out.println(i+" "+listaIngredientes[i].getNombre()+"\t\t\t"+listaIngredientes[i].getCantidad());
 			
 		}
+		
+		System.out.println("\n");
 		
 	}
 }

@@ -40,12 +40,38 @@ public class Cocinerio extends Persona {
 	
 	public void imprimirCocinero() {
 	
-		System.out.println("Estrellas:"+"\t\t"+"Nombre:"+"\t\t"+"Dirrecion:"+"\t\t"+"ID:");
+		System.out.println("\n");
+		System.out.println("\t\t\t"+"Cocineros");
+		System.out.println("Indice:"+"\t\t"+"Estrellas:"+"\t\t"+"Nombre:"+"\t\t"+"Dirrecion:"+"\t\t"+"ID:");
 		for(int i= 0; i <= cont; i++){ 
-						
-			System.out.println(cocinerios[i].getEstrellas()+"\t\t"+cocinerios[i].getNombreCompleto()+"\t\t"+cocinerios[i].getDireccion()+"\t\t"+cocinerios[i].getId());
+			
+				System.out.println(i+"\t\t"+cocinerios[i].getEstrellas()+"\t\t"+cocinerios[i].getNombreCompleto()+"\t\t"+cocinerios[i].getDireccion()+"\t\t"+cocinerios[i].getId());
+				
+			}
+		
+		System.out.println("\n");
+		
+	}
+	
+	public void Eliminar(int indice) {
+		
+		for(int i=0; i<=cont; i++) {
+			
+			if(i == indice) {
+				
+				cont--;
+				
+				for(int j=i; j<=cont;j++) {
+					
+					cocinerios[j] = cocinerios[j+1];
+					
+				}
+				
+			}
 			
 		}
+		
+		imprimirCocinero();
 		
 	}
 

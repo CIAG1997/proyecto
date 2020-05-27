@@ -34,9 +34,20 @@ public class Pastas extends Ingredientes implements Partes {
 		
 		for(int i= 0; i <= cont; i++){ 
 						
-			System.out.println(pastas[i].getNombre()+"\t\t\t"+pastas[i].getPrecio());
+			System.out.println(i+" "+pastas[i].getNombre()+"\t\t\t"+pastas[i].getPrecio());
 			
 		}
+		System.out.println("\n");
+		
+	}
+
+	public void eliminar() {
+		
+		
+	}
+	
+	public void agregarComida(Granos granos) {
+		
 		
 	}
 
